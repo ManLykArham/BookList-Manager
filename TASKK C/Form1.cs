@@ -16,6 +16,10 @@ namespace TASKK_C
         public Form1()
         {
             InitializeComponent();
+
+            // Populates the ComboBox with sorting options
+            sortComboBox.Items.AddRange(new string[] { "Title", "Author", "ISBN" });
+            sortComboBox.SelectedIndex = 2; // Default to ISBN
         }
 
         private void Title_Click(object sender, EventArgs e)
@@ -32,9 +36,8 @@ namespace TASKK_C
             // Validates that none of the fields are empty
             if (string.IsNullOrWhiteSpace(bookTitle) || string.IsNullOrWhiteSpace(authorName) || string.IsNullOrWhiteSpace(isbn))
             {
-                // Shows a message box indicating that all fields must be filled
                 MessageBox.Show("All fields (Title, Author, ISBN) must be filled.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Exits the method to prevent adding an invalid book
+                return;
             }
 
             // Validates that the ISBN is unique
@@ -47,12 +50,16 @@ namespace TASKK_C
             // Creates a new book and adds it to the list
             Book<string> newBook = new Book<string>(bookTitle, authorName, isbn);
             bookList.AddItem(newBook);
-            bookList.Sort();
+
+            // Get the selected sorting option
+            string selectedSortOption = sortComboBox.SelectedItem?.ToString() ?? "ISBN"; // Default to ISBN if no option is selected
+
+            // Sort the book list based on the selected option
+            bookList.Sort(selectedSortOption);
+
+            // Display the updated list
             BooksTextBox.Text = bookList.DisplayItems();
         }
-
-
-
 
         private void RemoveBook_Click(object sender, EventArgs e)
         {
@@ -64,6 +71,18 @@ namespace TASKK_C
             }
             removeBookISBN = RemoveISBNtextBox.Text;
             bookList.RemoveItem(removeBookISBN.ToString());
+            BooksTextBox.Text = bookList.DisplayItems();
+        }
+
+        private void SortButton_Click(object sender, EventArgs e)
+        {
+            // Gets the selected sorting option from the ComboBox
+            string selectedSortOption = sortComboBox.SelectedItem?.ToString() ?? "ISBN"; // Default to ISBN if nothing is selected
+
+            // Sorts the book list based on the selected option
+            bookList.Sort(selectedSortOption);
+
+            // Refreshes the display after sorting
             BooksTextBox.Text = bookList.DisplayItems();
         }
     }

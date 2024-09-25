@@ -39,35 +39,42 @@
             this.RemoveBook = new System.Windows.Forms.Button();
             this.RemoveISBNtextBox = new System.Windows.Forms.TextBox();
             this.ISBNofBook = new System.Windows.Forms.Label();
+            this.sortComboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SortButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TitletextBox
             // 
-            this.TitletextBox.Location = new System.Drawing.Point(235, 137);
+            this.TitletextBox.Location = new System.Drawing.Point(118, 71);
+            this.TitletextBox.Margin = new System.Windows.Forms.Padding(2);
             this.TitletextBox.Name = "TitletextBox";
-            this.TitletextBox.Size = new System.Drawing.Size(169, 31);
+            this.TitletextBox.Size = new System.Drawing.Size(86, 20);
             this.TitletextBox.TabIndex = 0;
             // 
             // authorNameTextBox
             // 
-            this.authorNameTextBox.Location = new System.Drawing.Point(235, 213);
+            this.authorNameTextBox.Location = new System.Drawing.Point(118, 111);
+            this.authorNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.authorNameTextBox.Name = "authorNameTextBox";
-            this.authorNameTextBox.Size = new System.Drawing.Size(169, 31);
+            this.authorNameTextBox.Size = new System.Drawing.Size(86, 20);
             this.authorNameTextBox.TabIndex = 1;
             // 
             // ISBNtextBox
             // 
-            this.ISBNtextBox.Location = new System.Drawing.Point(235, 287);
+            this.ISBNtextBox.Location = new System.Drawing.Point(118, 149);
+            this.ISBNtextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ISBNtextBox.Name = "ISBNtextBox";
-            this.ISBNtextBox.Size = new System.Drawing.Size(169, 31);
+            this.ISBNtextBox.Size = new System.Drawing.Size(86, 20);
             this.ISBNtextBox.TabIndex = 2;
             // 
             // BookTitle
             // 
             this.BookTitle.AutoSize = true;
-            this.BookTitle.Location = new System.Drawing.Point(45, 143);
+            this.BookTitle.Location = new System.Drawing.Point(22, 74);
+            this.BookTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BookTitle.Name = "BookTitle";
-            this.BookTitle.Size = new System.Drawing.Size(114, 25);
+            this.BookTitle.Size = new System.Drawing.Size(58, 13);
             this.BookTitle.TabIndex = 3;
             this.BookTitle.Text = "Book Title:";
             this.BookTitle.Click += new System.EventHandler(this.Title_Click);
@@ -75,26 +82,29 @@
             // AuthorName
             // 
             this.AuthorName.AutoSize = true;
-            this.AuthorName.Location = new System.Drawing.Point(45, 219);
+            this.AuthorName.Location = new System.Drawing.Point(22, 114);
+            this.AuthorName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AuthorName.Name = "AuthorName";
-            this.AuthorName.Size = new System.Drawing.Size(143, 25);
+            this.AuthorName.Size = new System.Drawing.Size(72, 13);
             this.AuthorName.TabIndex = 4;
             this.AuthorName.Text = "Author Name:";
             // 
             // ISBN
             // 
             this.ISBN.AutoSize = true;
-            this.ISBN.Location = new System.Drawing.Point(45, 290);
+            this.ISBN.Location = new System.Drawing.Point(22, 151);
+            this.ISBN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ISBN.Name = "ISBN";
-            this.ISBN.Size = new System.Drawing.Size(66, 25);
+            this.ISBN.Size = new System.Drawing.Size(35, 13);
             this.ISBN.TabIndex = 5;
             this.ISBN.Text = "ISBN:";
             // 
             // AddBook
             // 
-            this.AddBook.Location = new System.Drawing.Point(50, 372);
+            this.AddBook.Location = new System.Drawing.Point(25, 193);
+            this.AddBook.Margin = new System.Windows.Forms.Padding(2);
             this.AddBook.Name = "AddBook";
-            this.AddBook.Size = new System.Drawing.Size(140, 37);
+            this.AddBook.Size = new System.Drawing.Size(70, 19);
             this.AddBook.TabIndex = 6;
             this.AddBook.Text = "Add Book";
             this.AddBook.UseVisualStyleBackColor = true;
@@ -102,17 +112,19 @@
             // 
             // BooksTextBox
             // 
-            this.BooksTextBox.Location = new System.Drawing.Point(571, 137);
+            this.BooksTextBox.Location = new System.Drawing.Point(345, 53);
+            this.BooksTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.BooksTextBox.Name = "BooksTextBox";
-            this.BooksTextBox.Size = new System.Drawing.Size(536, 469);
+            this.BooksTextBox.Size = new System.Drawing.Size(326, 335);
             this.BooksTextBox.TabIndex = 7;
             this.BooksTextBox.Text = "";
             // 
             // RemoveBook
             // 
-            this.RemoveBook.Location = new System.Drawing.Point(50, 616);
+            this.RemoveBook.Location = new System.Drawing.Point(25, 320);
+            this.RemoveBook.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveBook.Name = "RemoveBook";
-            this.RemoveBook.Size = new System.Drawing.Size(170, 37);
+            this.RemoveBook.Size = new System.Drawing.Size(85, 19);
             this.RemoveBook.TabIndex = 8;
             this.RemoveBook.Text = "Remove Book";
             this.RemoveBook.UseVisualStyleBackColor = true;
@@ -120,25 +132,59 @@
             // 
             // RemoveISBNtextBox
             // 
-            this.RemoveISBNtextBox.Location = new System.Drawing.Point(235, 537);
+            this.RemoveISBNtextBox.Location = new System.Drawing.Point(118, 279);
+            this.RemoveISBNtextBox.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveISBNtextBox.Name = "RemoveISBNtextBox";
-            this.RemoveISBNtextBox.Size = new System.Drawing.Size(169, 31);
+            this.RemoveISBNtextBox.Size = new System.Drawing.Size(86, 20);
             this.RemoveISBNtextBox.TabIndex = 9;
             // 
             // ISBNofBook
             // 
             this.ISBNofBook.AutoSize = true;
-            this.ISBNofBook.Location = new System.Drawing.Point(45, 543);
+            this.ISBNofBook.Location = new System.Drawing.Point(22, 282);
+            this.ISBNofBook.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ISBNofBook.Name = "ISBNofBook";
-            this.ISBNofBook.Size = new System.Drawing.Size(145, 25);
+            this.ISBNofBook.Size = new System.Drawing.Size(75, 13);
             this.ISBNofBook.TabIndex = 10;
             this.ISBNofBook.Text = "ISBN of Book:";
             // 
+            // sortComboBox
+            // 
+            this.sortComboBox.FormattingEnabled = true;
+            this.sortComboBox.Location = new System.Drawing.Point(70, 389);
+            this.sortComboBox.Name = "sortComboBox";
+            this.sortComboBox.Size = new System.Drawing.Size(200, 21);
+            this.sortComboBox.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 392);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Sort by:";
+            // 
+            // SortButton
+            // 
+            this.SortButton.Location = new System.Drawing.Point(25, 434);
+            this.SortButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SortButton.Name = "SortButton";
+            this.SortButton.Size = new System.Drawing.Size(70, 19);
+            this.SortButton.TabIndex = 13;
+            this.SortButton.Text = "Sort Booklist";
+            this.SortButton.UseVisualStyleBackColor = true;
+            this.SortButton.Click += new System.EventHandler(this.SortButton_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1160, 727);
+            this.ClientSize = new System.Drawing.Size(692, 484);
+            this.Controls.Add(this.SortButton);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.sortComboBox);
             this.Controls.Add(this.ISBNofBook);
             this.Controls.Add(this.RemoveISBNtextBox);
             this.Controls.Add(this.RemoveBook);
@@ -150,6 +196,7 @@
             this.Controls.Add(this.ISBNtextBox);
             this.Controls.Add(this.authorNameTextBox);
             this.Controls.Add(this.TitletextBox);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -170,6 +217,9 @@
         private System.Windows.Forms.Button RemoveBook;
         private System.Windows.Forms.TextBox RemoveISBNtextBox;
         private System.Windows.Forms.Label ISBNofBook;
+        private System.Windows.Forms.ComboBox sortComboBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button SortButton;
     }
 }
 

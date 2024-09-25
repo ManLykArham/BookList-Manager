@@ -89,35 +89,46 @@ namespace TASKK_C
             return true;  // ISBN is not found
         }
 
-        // Sorts the linked list of books based on ISBN
-        public void Sort()
+        // Sorts the linked list of books
+        public void Sort(string sortBy)
         {
             BookLinkGen<T> temp = BookList;
 
-            // Performs selection sort on the linked list
+            // Performs selection sort on the linked list based on the selected criterion
             while (temp != null)
             {
                 BookLinkGen<T> smallValue = temp;
                 BookLinkGen<T> tempList = temp.Next;
 
-                // Finds the smallest item in the remaining list
                 while (tempList != null)
                 {
-                    if (smallValue.Book.CompareTo(tempList.Book) > 0)
+                    // Sort by ISBN
+                    if (sortBy == "ISBN" && smallValue.Book.ISBN.CompareTo(tempList.Book.ISBN) > 0)
                     {
                         smallValue = tempList;
                     }
+                    // Sort by Title
+                    else if (sortBy == "Title" && smallValue.Book.Title.CompareTo(tempList.Book.Title) > 0)
+                    {
+                        smallValue = tempList;
+                    }
+                    // Sort by Author
+                    else if (sortBy == "Author" && smallValue.Book.Author.CompareTo(tempList.Book.Author) > 0)
+                    {
+                        smallValue = tempList;
+                    }
+
                     tempList = tempList.Next;
                 }
 
-                // Swaps the books
+                // Swap the books
                 Book<T> x = temp.Book;
                 temp.Book = smallValue.Book;
                 smallValue.Book = x;
 
-                // Moves to the next node
                 temp = temp.Next;
             }
         }
+
     }
 }
