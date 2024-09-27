@@ -35,6 +35,14 @@ In this project, I enhanced my understanding of **linked list operations** and i
 
 ---
 
+## 🎥 Demo
+
+Watch the demo of the AI Image Generator Web App:
+
+[Demo Video](https://youtu.be/vGnsaRPA6GU?si=C9FmTuZqRrKj4kO4)
+
+---
+
 ## 💡 Achievements
 
 This project gave me a deeper understanding of how to implement and manipulate **linked lists**. I gained proficiency in **object-oriented programming** and learned how to apply **generics** to create more flexible and reusable code. Additionally, building the Windows Forms UI improved my ability to design interactive, real-time user interfaces. 🧠
