@@ -37,7 +37,7 @@ In this project, I enhanced my understanding of **linked list operations** and i
 
 ## 🎥 Demo
 
-Watch the demo of the AI Image Generator Web App:
+Watch the demo of the BookList Manager project:
 
 [Demo Video](https://youtu.be/vGnsaRPA6GU?si=C9FmTuZqRrKj4kO4)
 
